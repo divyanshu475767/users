@@ -1,0 +1,46 @@
+.invalid{
+    width: 55%;
+    height: 160px;
+    margin: auto;
+    margin-top: 40px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: rgb(220, 212, 243);
+    position: absolute;
+    top: 8.2rem;
+    left: 10rem;
+    top: 12rem;
+}
+
+
+.head{
+    height: 35px;
+    background-color:purple;
+    border-radius: 15px;
+    padding: 3px;
+    color: white;
+    font-size: 23px;
+    padding-left: 10px;
+}
+
+.suggestion{
+    display: flex;
+    padding-left: 10px;
+    justify-content: space-between;
+
+
+}
+
+.suggestion button{
+    width: 50px;
+    background-color: purple;
+    color: white;
+    border-radius: 15px;
+    height: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    margin-right:20px;
+    margin-top: 80px;
+
+}

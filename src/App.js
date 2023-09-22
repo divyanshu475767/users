@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import UserForm from "./components/UserForm";
+import User from "./components/user";
+import { useState } from "react";
 function App() {
+
+  const dummy_users = [{ name: "dipu", age: 30 }];
+  const [users, setUsers] = useState(dummy_users);
+
+
+  const getUserDetails = (user) => {
+    console.log("lemon");
+    setUsers((users)=>[...users, user]);
+  };
+
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserForm userDetails={getUserDetails} />
+     {/* <Invalid/> */}
+      {users.map((user) => {
+        return <User key={Math.random()} name={user.name} age={user.age} />;
+      })}
     </div>
   );
 }
